@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/new.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+          <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+          <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+          <!------ Include the above in your HEAD tag ---------->
+          
+          <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+          <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+          <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+          <!------ Include the above in your HEAD tag ---------->
+          
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Free MINDZ</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/topics"> Form</a></li>
+                      
+            <li><a href="{{url_for('logout')}}">Logout</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+    </body>
+    </head>
+    <body>
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="/new">Counsellors</a></li>
+            <li><a href="/topics">Form</a></li>
+            <li><a href="{{ url_for('checkmood') }}">Video session</a></li>
+            <button type="submit" class="btn btn-primary" id="sendMessageButton" href="{{ url_for('checkmood') }}">Video session</button>
+              </ul>
+          
+        </div>
+
+        </div>
+      </body>
+   
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Welcome,{{name}}</h1>
+          
+
+<div class="container">
+<div class="col-xs-12">
+
+    <div class="page-header">
+        <h3></h3>Services</h3>
+        <p>The following are some of the services and topics that are offered and tackled.</p> </p>
+        <p> Geared towards your well-being.</p>
+    </div>
+        
+    <div class="carousel slide" id="myCarousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+    						<div class="fff">
+								<div class="thumbnail">
+									<a href=""></a><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Individual Counselling</h4>
+									<p>This involves self or personal counselling sessions. With the safe space created just for you.</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Peer Counselling</h4>
+									<p>This counselling involves talking  and sharing with your fellow trained student.The first contact who an easily understand your situation.</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Career Counselling</h4>
+									<p>This involves issues about your professional path and necessary guidelines to ensure you achieve them.Giving you access to materials and even individuals successful in profession to be your mentors</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Life Skills</h4>
+									<p>Having problems with normal everday acivities such as socializing?Guidance on communication skills,interpersonal skills,decision making and assertiveness.</p>
+											</div>
+                            </div>
+                        </li>
+                    </ul>
+              </div><!-- /Slide1 --> 
+            <div class="item">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Couple counselling</h4>
+									<p>Love is beautiful and to help you maintain a healthy realtionship in your relationship and also keep your performance at the optimum in your studies.</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Family Counselling</h4>
+									<p>Our families form our backbone and strongest foundation in our lives.Feel welcome to talk to us about how to improve and better your relationship with your siblings,guardians or parents.</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Group Counselling</h4>
+									<p>This involves having support members in a group undergoing similar issues  and sharing them amongst each other with a counsellor guidance. </p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Drugs and substance abuse</h4>
+									<p>This involves services related to drug addiction,abuse and process of rehabilitation</p>
+									
+								</div>
+                            </div>
+                        </li>
+                    </ul>
+              </div><!-- /Slide2 --> 
+            <div class="item">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">	
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Depression</h4>
+									<p>Feelings of loniness,fear,anxiety and withdrawal.Guidance on how to deal with this.</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Stress</h4>
+									<p>Tension,anger ,nervous ever felt this negatively leading to your withdrawal,loss of apetitie?Talk to us.</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4>Anxiety</h4>
+									<p>Fear and worry is a dangerous combination.Especially during exam, first university entry,career blues...all can be subdued.</p>
+									
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="../static/img/drug-bg.jpg" alt=""></a>
+								</div>
+								<div class="caption">
+									<h4> Consultation</h4>
+									<p>Its not all about problems. You can consult us on other issues as well.Anytime </p>
+									
+								</div>
+                            </div>
+                        </li>
+                    </ul>
+              </div><!-- /Slide3 --> 
+        </div>
+        
+       
+	   <nav>
+			<ul class="control-box pager">
+				<li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+				<li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></li>
+			</ul>
+		</nav>
+	   <!-- /.control-box -->   
+                              
+    </div><!-- /#myCarousel -->
+        
+</div><!-- /.col-xs-12 -->          
+
+</div><!-- /.container -->
+
+         
+          
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="../static/js/clean-blog.min.js"></script>
+</body>
+</html>
+        
+          
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
